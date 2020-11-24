@@ -37,6 +37,8 @@
                             <a class="dropdown-item" href="{{ route('freq-ask-questions.index') }}">Freq Ask Questions</a>
                             <a class="dropdown-item" href="{{ route('payment-methods.index') }}">Payment Methods</a>
                             <a class="dropdown-item" href="{{ route('pages.index') }}">Pages</a>
+                            <a class="dropdown-item" href="{{ route('users.index') }}">Users</a>
+                            <a class="dropdown-item" href="{{ route('page-users.index') }}">Page Users</a>
                         </div>
 
                     </li>

@@ -3,10 +3,10 @@
 namespace App\Models;
 
 use App\Models\Scopes\Searchable;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -102,11 +102,6 @@ class User extends Authenticatable
     public function followTopics()
     {
         return $this->hasMany(FollowTopic::class);
-    }
-
-    public function followAuthors()
-    {
-        return $this->hasMany(FollowAuthor::class, 'follower_id');
     }
 
     public function followAuthors()

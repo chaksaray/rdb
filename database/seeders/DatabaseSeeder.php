@@ -48,12 +48,12 @@ class DatabaseSeeder extends Seeder
         $this->call(NewsLetterTypeSeeder::class);
         $this->call(PageRoleSeeder::class);
         $this->call(FollowTopicSeeder::class);
-        $this->call(UserSeeder::class);
         $this->call(PaymentMethodSeeder::class);
         $this->call(CategorySeeder::class);
         $this->call(SearchSeeder::class);
         $this->call(FeaturePostSeeder::class);
         $this->call(TrendingPostSeeder::class);
         $this->call(NotificationTypeSeeder::class);
+        $this->call(UserSeeder::class);
     }
 }
