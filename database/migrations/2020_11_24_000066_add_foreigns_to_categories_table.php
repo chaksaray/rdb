@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class AddForeignsToCategoriesTable extends Migration
 {
@@ -28,8 +28,8 @@ class AddForeignsToCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::table('categories', function (Blueprint $table) {
-            $table->dropForeign(['status_id']);
-        });
+        // Schema::table('categories', function (Blueprint $table) {
+        //     $table->dropForeign(['status_id']);
+        // });
     }
 }

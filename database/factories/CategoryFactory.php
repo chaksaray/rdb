@@ -3,8 +3,8 @@
 namespace Database\Factories;
 
 use App\Models\Category;
-use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class CategoryFactory extends Factory
 {
@@ -25,7 +25,7 @@ class CategoryFactory extends Factory
         return [
             'title' => $this->faker->sentence(10),
             'description' => $this->faker->sentence(15),
-            'icon' => $this->faker->text(255),
+            'icon' => $this->faker->sentence(10),
             'status_id' => \App\Models\Status::factory(),
         ];
     }

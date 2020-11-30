@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreatePaymentMethodsTable extends Migration
 {
@@ -16,7 +16,7 @@ class CreatePaymentMethodsTable extends Migration
         Schema::create('payment_methods', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('icon');
+            $table->string('icon', 255);
             $table->text('description');
             $table->unsignedBigInteger('status_id');
 

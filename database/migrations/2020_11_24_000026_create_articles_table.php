@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateArticlesTable extends Migration
 {
@@ -22,9 +22,9 @@ class CreateArticlesTable extends Migration
             $table->unsignedBigInteger('report_article_type_id');
             $table->string('title');
             $table->text('body');
-            $table->string('feature_image');
+            $table->string('feature_image', 255);
             $table->integer('page_id')->nullable();
-            $table->string('tags')->nullable();
+            $table->string('tags', 255)->nullable();
             $table->integer('read_time');
 
             $table->timestamps();

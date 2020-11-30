@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateSearchesTable extends Migration
 {
@@ -15,7 +15,7 @@ class CreateSearchesTable extends Migration
     {
         Schema::create('searches', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('keyword');
+            $table->string('keyword', 255);
             $table->boolean('is_found');
             $table->integer('user_id')->nullable();
 

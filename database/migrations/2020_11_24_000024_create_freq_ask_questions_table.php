@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateFreqAskQuestionsTable extends Migration
 {
@@ -15,7 +15,7 @@ class CreateFreqAskQuestionsTable extends Migration
     {
         Schema::create('freq_ask_questions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('question');
+            $table->string('question', 255);
             $table->text('answer');
             $table->unsignedBigInteger('status_id');
 

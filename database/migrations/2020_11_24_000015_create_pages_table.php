@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreatePagesTable extends Migration
 {
@@ -17,14 +17,14 @@ class CreatePagesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->text('description')->nullable();
-            $table->string('website')->nullable();
-            $table->string('profile');
-            $table->string('cover');
-            $table->string('user_name');
+            $table->string('website', 255)->nullable();
+            $table->string('profile', 255);
+            $table->string('cover', 255);
+            $table->string('user_name', 255);
             $table->integer('created_by');
             $table->unsignedBigInteger('category_id');
             $table->integer('status_id');
-            $table->string('custom_url');
+            $table->string('custom_url', 255);
             $table->string('phone');
             $table->string('email');
 

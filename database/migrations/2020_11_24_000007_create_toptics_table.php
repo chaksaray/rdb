@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateTopticsTable extends Migration
 {
@@ -20,7 +20,7 @@ class CreateTopticsTable extends Migration
             $table->text('description');
             $table->unsignedBigInteger('status_id');
             $table->string('image')->nullable();
-            $table->string('icon');
+            $table->string('icon', 255);
 
             $table->timestamps();
         });
